@@ -9,6 +9,7 @@ var rightWall : BoxCollider2D;
 
 var player1 : Transform;
 var player2 : Transform;
+var ball : Transform;
 
 function Start () {
 	//move each wall to it's location
@@ -26,6 +27,8 @@ function Start () {
 	
 	player1.position = mainCamera.ScreenToWorldPoint(new Vector3(75f, Screen.height/2, 1f));
 	player2.position = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width - 75f, Screen.height/2, 1f));
+	
+	ball.position = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width/2, Screen.height/2, 1f));
 }
 
 function Update () {
